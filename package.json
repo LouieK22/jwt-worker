@@ -1,7 +1,7 @@
 {
-	"name": "pname",
+	"name": "jwt-worker",
 	"version": "1.0.0",
-	"description": "Cloudflare worker TypeScript template",
+	"description": "Cloudflare worker to generate JSON Web Tokens",
 	"main": "index.js",
 	"scripts": {
 		"build": "webpack",
@@ -12,8 +12,8 @@
 		"transpile": "tsc --project ./test",
 		"postinstall": "patch-package"
 	},
-	"author": "author",
-	"license": "MIT OR Apache-2.0",
+	"author": "LouieK22",
+	"license": "MIT",
 	"devDependencies": {
 		"@cloudflare/workers-types": "^2.0.0",
 		"@types/chai": "^4.2.11",
