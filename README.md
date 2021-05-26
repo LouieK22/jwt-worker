@@ -1,6 +1,6 @@
 # jwt-worker
 
-Cloudflare Worker to generate JSON Web Tokens. Useful for environments without performant crypto implementations (Roblox)
+Cloudflare Worker to generate JSON Web Tokens. Useful for environments without performant crypto implementations (Roblox). Specifically adapted for Firestore at the moment. 
 
 ## Setup
 1. Configure wrangler.toml according to the [Cloudflare Workers Docs](https://developers.cloudflare.com/workers/get-started/guide#7-configure-your-project-for-deployment)
