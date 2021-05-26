@@ -1,5 +1,12 @@
-import config from "./config"
+import { generateJWT } from './jwt'
 
 export async function handleRequest(request: Request): Promise<Response> {
-	return new Response(`request method: ${request.method}`)
+	const authHeader = request.headers.get('token')
+	if (!authHeader || authHeader !== AUTH_TOKEN) {
+		return new Response('401: unauthorized', { status: 401 })
+	}
+	
+	const jwt = await generateJWT()
+
+	return new Response(jwt)
 }
