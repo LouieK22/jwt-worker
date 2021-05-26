@@ -1,0 +1,20 @@
+diff --git a/node_modules/@types/node-jose/index.d.ts b/node_modules/@types/node-jose/index.d.ts
+index cffac47..bce987b 100755
+--- a/node_modules/@types/node-jose/index.d.ts
++++ b/node_modules/@types/node-jose/index.d.ts
+@@ -283,8 +283,14 @@ export namespace JWS {
+         opts?: { allowEmbeddedKey?: boolean; algorithms?: string[]; handlers?: any }
+     ): Verifier;
+ 
++
++    interface OutputSignature {
++        protected: string,
++        signature: string
++    }
+     interface CreateSignResult {
+-        signResult: object;
++        payload: string,
++        signatures: Array<OutputSignature>
+     }
+ 
+     interface Signer {
