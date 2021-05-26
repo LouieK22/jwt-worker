@@ -4,3 +4,4 @@ transpiled
 worker
 gcp-auth.json
 src/config.ts
+wrangler.toml
