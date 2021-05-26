@@ -5,7 +5,7 @@ export async function handleRequest(request: Request): Promise<Response> {
 	if (!authHeader || authHeader !== AUTH_TOKEN) {
 		return new Response('401: unauthorized', { status: 401 })
 	}
-	
+
 	const jwt = await generateJWT()
 
 	return new Response(jwt)
